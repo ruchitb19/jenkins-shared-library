@@ -4,4 +4,6 @@ def call(image_name, folder) {
     echo "Building Docker image: ${fullImage}"
 
     sh "docker build -t ${fullImage} ${folder}"
+
+    return fullImage
 }

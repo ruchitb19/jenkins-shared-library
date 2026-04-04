@@ -1,9 +1,4 @@
-def call(image_name, folder) {
-    def fullImage = "${image_name}:${env.BUILD_NUMBER}"
-
-    echo "Building Docker image: ${fullImage}"
-
-    sh "docker build -t ${fullImage} ${folder}"
-
-    return fullImage
+def call(image_name, folder = ".") {
+    echo "Building Docker image: ${image_name}"
+    sh "docker build -t ${image_name} ${folder}"
 }

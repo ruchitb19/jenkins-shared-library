@@ -1,4 +1,4 @@
-def call(images, tag = "latest") {
+def call(images, tag) {
     echo "Pulling Docker Images from Docker Hub"
 
     // If single image is passed as string → convert to list
